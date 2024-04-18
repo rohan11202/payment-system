@@ -1,6 +1,8 @@
-const { User } = require("../schemas/userSchema");
+const { User } = require("../../schemas/userSchema");
+const { Account } = require("../../schemas/accountSchema");
+
 const jwt = require("jsonwebtoken");
-const { signupBody } = require("../types");
+const { signupBody } = require("../../types");
 
 require("dotenv").config();
 
@@ -31,6 +33,11 @@ const signUp = async (req, res) => {
   });
 
   const userId = user._id;
+
+  await Account.create({
+    userId,
+    balance: 1 + Math.random() * 10000,
+  });
 
   const token = jwt.sign(
     {

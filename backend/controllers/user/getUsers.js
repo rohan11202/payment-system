@@ -1,4 +1,4 @@
-const { User } = require("../schemas/userSchema");
+const { User } = require("../../schemas/userSchema");
 
 const getUsers = async (req, res) => {
   const filter = req.query.filter || "";

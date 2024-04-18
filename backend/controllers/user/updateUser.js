@@ -1,5 +1,5 @@
-const { User } = require("../schemas/userSchema");
-const { updateBody } = require("../types");
+const { User } = require("../../schemas/userSchema");
+const { updateBody } = require("../../types");
 
 const updateUser = async (req, res) => {
   const { success } = updateBody.safeParse(req.body);

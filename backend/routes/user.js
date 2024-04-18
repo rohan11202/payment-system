@@ -1,9 +1,9 @@
 const express = require("express");
-const { signIn } = require("../controllers/signIn");
-const { signUp } = require("../controllers/signUp");
+const { signIn } = require("../controllers/user/signIn");
+const { signUp } = require("../controllers/user/signUp");
 const { authMiddleware } = require("../controllers/middleware");
-const { updateUser } = require("../controllers/updateUser");
-const { getUsers } = require("../controllers/getUsers");
+const { updateUser } = require("../controllers/user/updateUser");
+const { getUsers } = require("../controllers/user/getUsers");
 
 const router = express.Router();
 

@@ -1,6 +1,6 @@
-const { User } = require("../schemas/userSchema");
+const { User } = require("../../schemas/userSchema");
 const jwt = require("jsonwebtoken");
-const { signinBody } = require("../types");
+const { signinBody } = require("../../types");
 
 require("dotenv").config();
 
